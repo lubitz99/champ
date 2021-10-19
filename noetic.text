@@ -12,17 +12,11 @@
 If you want to use any of the pre-configured robots like Anymal, Mini Cheetah, or Spot, follow the instructions [here](https://github.com/chvmp/robots).
 
 ### Change to python3
-
 sudo apt-get install -y python3-empy
-
 pip3 install empy
+export ROS_PYTHON_VERSION=3
+conda install -c conda-forge catkin_pkg
+conda install -c conda-forge rospkg
+catkin_make -DPYTHON_EXECUTABLE=/home/paperspace/src/miniconda/bin/python3
 
-sudo apt install python3-catkin-pkg
-sudo apt-get install python3-catkin-pkg
 
-
-### 1.2 Build your workspace:
-
-    cd <your_ws>
-    catkin_make
-    source <your_ws>/devel/setup.bash
